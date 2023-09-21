@@ -8,11 +8,18 @@
 	font-weight: 500;
 	src: url("../fonts/Roboto-Medium.woff2");
 }
+@font-face {
+	font-family: "FiraMono";
+	font-weight: 400;
+	src: url("../fonts/FiraMono-Regular.woff2");
+}
 
 :root {
 	--body-background: #f0f0f0;
 	--body-color: #282828;
 	--body-separator: #a0a0a0;
+	--highlight-color: #ff7119;
+	--code-background: #e0e0e0;
 }
 
 * {box-sizing: border-box;}
@@ -43,6 +50,11 @@ p {
 	margin-top: 0;
 }
 
+em {
+	color: var(--highlight-color);
+	font-style: normal;
+}
+
 a {
 	color: #0066cc;
 	font-weight: 500;
@@ -52,10 +64,32 @@ a:hover {
 	text-decoration: underline;
 }
 
+.explanation {
+	max-width: 14.5em;
+	margin-left: auto;
+	margin-right: auto;
+}
+.explanation p {
+	margin-bottom: 0;
+}
+.explanation code {
+	display: block;
+	margin-bottom: 1em;
+	padding: 0.25em 0;
+	border-radius: 0.375em;
+	background: var(--code-background);
+	font-family: FiraCode, FiraMono, Consolas, monospace;
+	font-size: 0.75em;
+	font-weight: 400;
+	text-align: center;
+}
+
 @media (prefers-color-scheme: dark) {
 	:root {
 		--body-background: #181818;
 		--body-color: #e0e0e0;
 		--body-separator: #606060;
+		--highlight-color: #ffa166;
+		--code-background: #202020;
 	}
 }
